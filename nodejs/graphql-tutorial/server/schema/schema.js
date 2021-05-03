@@ -52,7 +52,7 @@ const AuthorType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
-        books: { //the actual keyword to use in client query, i.e. books(args){list of fields}
+        book: { //the actual keyword to use in client query, i.e. books(args){list of fields}
             type: BookType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
@@ -68,6 +68,12 @@ const RootQuery = new GraphQLObjectType({
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
                 return _.find(authors, { id: args.id })
+            }
+        },
+        books: {
+            type: GraphQLList(BookType),
+            resolve(parent, args){
+                return books;
             }
         }
     }
