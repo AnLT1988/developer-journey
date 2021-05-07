@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Book 1",
+        "genre": "Adventure",
+        "authorId": "1"
+    },
+    {
+        "name": "Book 2",
+        "genre": "Adventure",
+        "authorId": "1"
+    },
+    {
+        "name": "Book 3",
+        "genre": "Adventure",
+        "authorId": "2"
+    }
+]

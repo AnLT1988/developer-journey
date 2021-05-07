@@ -1,11 +1,24 @@
-import { Fragment } from "react"
+import { InMemoryCache, ApolloClient, ApolloProvider } from '@apollo/client';
+import { Component } from 'react';
 
-const App = () => {
-  return (
-    <Fragment>
-      <h1>Hello React</h1>
-    </Fragment>
-  )
+import AddBook from './components/AddBook';
+import BookList from './components/BookList';
+
+const apolloClient = new ApolloClient({
+  cache: new InMemoryCache({}),
+  uri: 'http://localhost:4000/graphql'
+})
+
+class App extends Component {
+  render() {
+    return (
+      <ApolloProvider client={apolloClient}>
+        <h1>Hello React</h1>
+        <BookList />
+        <AddBook />
+      </ApolloProvider>
+    )
+  }
 }
 
 export default App
