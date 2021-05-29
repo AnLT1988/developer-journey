@@ -3,6 +3,7 @@ import { Component } from 'react';
 
 import AddBook from './components/AddBook';
 import BookList from './components/BookList';
+import './index.css'
 
 const apolloClient = new ApolloClient({
   cache: new InMemoryCache({}),
@@ -13,9 +14,11 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={apolloClient}>
-        <h1>Hello React</h1>
-        <BookList />
-        <AddBook />
+        <div id="main">
+          <h1>Hello React</h1>
+          <BookList />
+          <AddBook />
+        </div>
       </ApolloProvider>
     )
   }

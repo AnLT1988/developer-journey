@@ -18,8 +18,8 @@ const BookList = () => {
     if (loading) return <h1>Loading...</h1>
     return (
 
-        <div>
-            <ul id="book-list">
+        <div id="book-list">
+            <ul>
                 {data.books.map((book) => { return <li key={book.id} value={book.id} onClick={handleClick}>{book.name}</li> })}
             </ul>
             <BookInfo selectedBookId={selectedBookId} />
