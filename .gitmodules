@@ -1,3 +1,9 @@
 [submodule "react/react-advanced-2020"]
 	path = react/react-advanced-2020
 	url = https://github.com/john-smilga/react-advanced-2020
+[submodule "nodejs\\libuv"]
+	path = nodejs\\libuv
+	url = https://github.com/libuv/libuv.git
+[submodule "nodejs/.\\nodejs_source_v16.2.0"]
+	path = nodejs/.\\nodejs_source_v16.2.0
+	url = https://github.com/nodejs/node.git
