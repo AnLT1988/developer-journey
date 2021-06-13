@@ -4,6 +4,7 @@ venv/
 .pyc
 
 pycache/
+__pycache__/
 activate.bat
 
 node_modules/
