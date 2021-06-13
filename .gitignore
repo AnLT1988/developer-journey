@@ -8,3 +8,6 @@ __pycache__/
 activate.bat
 
 node_modules/
+
+
+.vs/
